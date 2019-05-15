@@ -13,7 +13,7 @@ except ImportError:
 
 
 MONGODB = dict(
-    MONGO_HOST=os.getenv('MONGO_HOST', "192.168.33.11"),
+    MONGO_HOST=os.getenv('MONGO_HOST', "mongo"),
     MONGO_PORT=os.getenv('MONGO_PORT', 27017),
     MONGO_USERNAME=os.getenv('MONGO_USERNAME', ""),
     MONGO_PASSWORD=os.getenv('MONGO_PASSWORD', ""),

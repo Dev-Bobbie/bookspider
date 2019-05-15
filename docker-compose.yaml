@@ -1,0 +1,29 @@
+version: '3.1'
+services:
+  app:
+    build: .
+    image: bookspider:v01
+    container_name: bookspider
+    networks:
+      - localhost
+    working_dir: /bookspider
+    volumes:
+      - ./bookspider:/bookspider/bookspider
+      - ./main.py:/bookspider/main.py
+    depends_on:
+      - mongo
+    entrypoint: python main.py
+
+  mongo:
+    image: mongo
+    container_name: mongod
+    networks:
+      - localhost
+    ports:
+      - 27018:27017
+    volumes:
+      - ./data/mongo:/mongo
+      - ./data/mongo/mongod.conf:/etc/mongod.conf.orig
+
+networks:
+  localhost:

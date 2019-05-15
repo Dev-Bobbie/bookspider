@@ -1,0 +1,8 @@
+uvloop==0.12.2
+aiohttp==3.5.4
+requests==2.21.0
+scrapy_redis==0.6.8
+jsonpath==0.81
+motor==2.0.0
+Scrapy==1.6.0
+talospider==0.0.6
