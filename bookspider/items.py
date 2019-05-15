@@ -8,7 +8,14 @@
 import scrapy
 
 
-class BookspiderItem(scrapy.Item):
+class BookItem(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    name = scrapy.Field()
+    price = scrapy.Field()
+    source = scrapy.Field()
+    comment = scrapy.Field()
+    vender = scrapy.Field()
+    book_image_url = scrapy.Field()
+    category1 = scrapy.Field()
+    category2 = scrapy.Field()
+    category3 = scrapy.Field()
